@@ -1,0 +1,26 @@
+{
+  "name": "@agte/telegram-sample-bot",
+  "version": "1.0.0",
+  "description": "Just test",
+  "type": "module",
+  "main": "./src/Application.js",
+  "scripts": {
+    "start": "node start.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agte/telegram-sample-bot.git"
+  },
+  "author": "Anna Agte <matiasrustagte@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/agte/telegram-sample-bot/issues"
+  },
+  "homepage": "https://github.com/agte/telegram-sample-bot#readme",
+  "dependencies": {
+    "koa": "^2.11.0",
+    "koa-body": "^4.1.1",
+    "koa-router": "^8.0.8"
+  }
+}
