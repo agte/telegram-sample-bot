@@ -19,6 +19,10 @@ export default class Application {
 
     const router = new KoaRouter();
 
+    router.get('/', (ctx) => {
+      ctx.body = 'Hello! This is @AnnaAgteBot - a sample telegram bot. It only can get webhooks from Telefram API.';
+    });
+
     router.post('/api/telegram/webhook', parseBody(), (ctx) => {
       const { update_id: updateId, message } = ctx.request.body;
       console.log(message);
