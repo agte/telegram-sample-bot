@@ -23,7 +23,7 @@ export default class Application {
       ctx.body = 'Hello! This is @AnnaAgteBot - a sample telegram bot. It only can get webhooks from Telefram API.';
     });
 
-    router.post('/api/telegram/webhook', parseBody(), (ctx) => {
+    router.post('/api/telegram/webhook/1107998527_AAHhVImW2B4K8RWFcZVQ8bJqlNB3nhJ8TgQ', parseBody(), (ctx) => {
       const { update_id: updateId, message } = ctx.request.body;
       console.log(message);
       switch (message.text) {
