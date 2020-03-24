@@ -34,6 +34,7 @@ export default class Application {
     alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
   }
 </script>
+<a href="https://t.me/AnnaAgteBot?start=QWERTY">Подключить рассылку</a>
 </body>
 </html>
       `;
