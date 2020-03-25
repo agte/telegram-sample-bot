@@ -33,7 +33,7 @@ export default class Application {
   src="https://telegram.org/js/telegram-widget.js?7"
   data-telegram-login="AnnaAgteBot"
   data-size="large"
-  data-auth-url="https://annaagte-bot.herokuapp.com/api/telegram/auth"
+  data-auth-url="https://annaagte-bot.herokuapp.com/api/telegram/auth?from=personal"
   data-request-access="write"
 ></script>
 или
