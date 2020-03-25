@@ -96,8 +96,8 @@ export default class Application {
       ctx.status = 200;
     });
 
-    router.post('/api/telegram/auth', parseBody(), async (ctx) => {
-      console.log(JSON.stringify(ctx.request.body));
+    router.get('/api/telegram/auth', parseBody(), async (ctx) => {
+      console.log(JSON.stringify(ctx.request.query));
       ctx.status = 200;
     });
 
