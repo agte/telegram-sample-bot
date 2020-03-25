@@ -28,12 +28,15 @@ export default class Application {
 <!doctype html>
 <html>
 <body>
-<script async src="https://telegram.org/js/telegram-widget.js?7" data-telegram-login="AnnaAgteBot" data-size="large" data-onauth="onTelegramAuth(user)" data-request-access="write"></script>
-<script type="text/javascript">
-  function onTelegramAuth(user) {
-    alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
-  }
-</script>
+<script
+  async
+  src="https://telegram.org/js/telegram-widget.js?7"
+  data-telegram-login="AnnaAgteBot"
+  data-size="large"
+  data-auth-url="https://annaagte-bot.herokuapp.com/api/telegram/auth"
+  data-request-access="write"
+></script>
+или
 <a href="https://t.me/AnnaAgteBot?start=QWERTY">Подключить рассылку</a>
 </body>
 </html>
@@ -90,6 +93,11 @@ export default class Application {
         default:
           // Do nothing
       }
+      ctx.status = 200;
+    });
+
+    router.post('/api/telegram/auth', parseBody(), async (ctx) => {
+      console.log(JSON.stringify(ctx.request.body));
       ctx.status = 200;
     });
 
